@@ -13,10 +13,6 @@ try:
 except ImportError:
     os.system("pip install json")
 try:
-    import lxml
-except ImportError:
-    os.system("pip install lxml")
-try:
     import bs4
 except ImportError:
     os.system("pip install bs4")
@@ -45,7 +41,7 @@ _________              _______  _______  _______
 """
     print(logo)
 try:
-    import requests, lxml, json
+    import requests, json
     from bs4 import BeautifulSoup
     from fake_useragent import UserAgent
     start()
@@ -65,7 +61,7 @@ try:
                 'user-agent': random_ua
             }
             html = requests.get(profile_url, headers= request_headers).text
-            soup = BeautifulSoup(html, 'lxml')
+            soup = BeautifulSoup(html, 'html.parser')
             user_d = soup.find("script", {"id":"__UNIVERSAL_DATA_FOR_REHYDRATION__", "type":"application/json"})
             user_d = str(user_d).replace("<script id=\"__UNIVERSAL_DATA_FOR_REHYDRATION__\" type=\"application/json\">", '').replace("</script>", '')
             user_d = json.loads(user_d)
