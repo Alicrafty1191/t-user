@@ -1,6 +1,6 @@
 <h1>How to Download?</h1>
 <ul>
-  <li>step1</li>
-  <li>step2</li>
-  <li>step3</li>
+  <li>git clone https://github.com/Alicrafty1191/t-user.git</li>
+  <li>cd t-user </li>
+  <li>python3 tuser.py</li>
 </ul>
