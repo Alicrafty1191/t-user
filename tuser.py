@@ -1,7 +1,6 @@
 from platform import system
 import os
 from datetime import datetime
-from fake_useragent import UserAgent
 uname = system()
 date_publish = "(Non-Date)"
 name_tool = "user1"
@@ -25,6 +24,10 @@ try:
     import requests
 except ImportError:
     os.system("pip install requests")
+try:
+    import fake_useragent
+except ImportError:
+    os.system("pip install fake_useragent")
 os.system(clear_code)
 def start():
     os.system(clear_code)
@@ -44,6 +47,7 @@ _________              _______  _______  _______
 try:
     import requests, lxml, json
     from bs4 import BeautifulSoup
+    from fake_useragent import UserAgent
     start()
     run = True
     while run:
