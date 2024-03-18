@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 uname = system()
 date_publish = "2024-3-18 3:33 AM"
-name_tool = "user1"
+name_tool = "tuser"
 if uname == 'Windows':
     clear_code = "cls"
 else:
