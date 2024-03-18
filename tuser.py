@@ -2,7 +2,7 @@ from platform import system
 import os
 from datetime import datetime
 uname = system()
-date_publish = "(Non-Date)"
+date_publish = "2024-3-18 3:33 AM"
 name_tool = "user1"
 if uname == 'Windows':
     clear_code = "cls"
@@ -85,8 +85,8 @@ try:
                 videos = user_stats['videoCount']
                 friends = user_stats['friendCount']
                 id = user_information['id']
-                createtime = datetime.fromtimestamp(int(user_information['createTime']))
-                lastuniqueupdate = datetime.fromtimestamp(int(user_information['uniqueIdModifyTime']))
+                createtime = datetime.fromtimestamp(int(user_information['ageGateTime']))
+                bio = user_information['signature']
                 isverified = user_information['verified']
                 language = user_information['language']
                 avatar = user_information['avatarMedium']
@@ -103,10 +103,11 @@ try:
 >> Friends > {friends}
 >> id > {id}
 >> Create Account Date > {createtime}
->> Last Username Update > {lastuniqueupdate}
+>> Bio > {bio}
 >> isVerified > {isverified}
 >> Language > {language}
 >> Avatar Link > {avatar}
+>> Video Count > {videos}
                 """
                 print(information)
 except KeyboardInterrupt:
