@@ -2,8 +2,8 @@ from platform import system
 import os
 from datetime import datetime
 uname = system()
-date_publish = "2024-3-18 3:33 AM"
-name_tool = "tuser"
+date_publish = "2024-3-18 4:20 AM"
+name_tool = "user1"
 if uname == 'Windows':
     clear_code = "cls"
 else:
@@ -68,6 +68,7 @@ try:
             statusMsg = user_d['__DEFAULT_SCOPE__']['webapp.user-detail']['statusMsg']
             if statusMsg == 'ok':
                 user_information = user_d['__DEFAULT_SCOPE__']['webapp.user-detail']['userInfo']['user']
+                user_information_v2 = user_d['__DEFAULT_SCOPE__']['webapp.biz-context']
                 user_stats = user_d['__DEFAULT_SCOPE__']['webapp.user-detail']['userInfo']['stats']
             else:
                 print("\033[1;31m>> Not Found!")
@@ -85,7 +86,8 @@ try:
                 videos = user_stats['videoCount']
                 friends = user_stats['friendCount']
                 id = user_information['id']
-                createtime = datetime.fromtimestamp(int(user_information['ageGateTime']))
+                uname = user_information_v2['os']
+                ismobile = user_information_v2['isMobile']
                 bio = user_information['signature']
                 isverified = user_information['verified']
                 language = user_information['language']
@@ -102,7 +104,8 @@ try:
 >> Followings > {followings}
 >> Friends > {friends}
 >> id > {id}
->> Create Account Date > {createtime}
+>> OS > {uname}
+>> isMobile > {ismobile}
 >> Bio > {bio}
 >> isVerified > {isverified}
 >> Language > {language}
