@@ -1,6 +1,6 @@
 <h1>How to Download?</h1>
 <ul>
-  <h2>For Linux (Android, Arch Linux...)</h2>
+  <h2>For Linux (Android, Debian, Arch Linux...)</h2>
   <li>git clone https://github.com/Alicrafty1191/t-user.git</li>
   <li>cd t-user </li>
   <li>python3 tuser.py</li>
@@ -17,6 +17,6 @@
 <h1>What's New?</h1>
 <ul>
   <li>Fix User Not Found Error</li>
-  <li>Add Country name in arabic</li>
-  <li>Add Version Details in Logo</li>
+  <li>Add Account creation date</li>
+  <li>Add <code>@cls</code> to clear screen</li>
 </ul>
