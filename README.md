@@ -3,6 +3,7 @@
   t-user is an OSINT (Open Source Intelligence) tool designed to extract and display
   publicly available information about TikTok accounts. It can show details such as
   region, user app language, account creation date, and more.
+  ![Screenshot](image.png)
 </p>
 
 <h1>How to Download?</h1>
